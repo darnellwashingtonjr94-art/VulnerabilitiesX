@@ -85,7 +85,7 @@ docker-compose up --build
 ### Option 2: Local Python Environment
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/YOUR_USERNAME/VulnerabilitiesX.git](https://github.com/YOUR_USERNAME/VulnerabilitiesX.git)
+git clone [https://github.com/darnellwashingtonjr94-art/VulnerabilitiesX.git](https://github.com/darnellwashingtonjr94-art/VulnerabilitiesX.git)
 cd VulnerabilitiesX
 
 # 2. Install required dependencies
