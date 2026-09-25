@@ -1,6 +1,7 @@
 <p align="center">
   <img src="IMG_4529.jpeg"
     
+
 # VulnerabilitiesX
 
 **VulnerabilitiesX** is an educational reference repository and security lab designed to demonstrate, analyze, and remediate modern cyber threats across AI agents, web applications, APIs, and automated bots.
