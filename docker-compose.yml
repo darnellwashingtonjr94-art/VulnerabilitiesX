@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  vulnerabilitiesx:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: vulnerabilitiesx:latest
+    container_name: vulnerabilitiesx_lab
+    # Keeps the container running if you want to exec into it, 
+    # or you can let it run the default runner script and exit.
+    command: python run_all_labs.py
+    # Optional: Map a local directory to view outputs on your host machine
+    # volumes:
+    #   - ./logs:/app/logs
