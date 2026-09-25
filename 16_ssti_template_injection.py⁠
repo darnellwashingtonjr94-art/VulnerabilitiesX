@@ -1,0 +1,24 @@
+"""
+Module: Web Application Vulnerabilities
+Threat: Server-Side Template Injection (SSTI)
+"""
+
+import jinja2
+
+def vulnerable_render_template(user_name: str):
+    # VULNERABLE: User input is concatenated directly into the template string before rendering.
+    # An attacker can inject template syntax like {{ config.items() }}
+    template_string = f"Hello, {user_name}! Welcome to our site."
+    template = jinja2.Template(template_string)
+    return template.render()
+
+def secure_render_template(user_name: str):
+    # SECURE: The template string is static. User input is passed as context variables.
+    template_string = "Hello, {{ name }}! Welcome to our site."
+    template = jinja2.Template(template_string)
+    return template.render(name=user_name)
+
+if __name__ == "__main__":
+    ssti_payload = "{{ 7 * 7 }}"
+    print("[Vulnerable Render]:", vulnerable_render_template(ssti_payload))
+    print("[Secure Render]:", secure_render_template(ssti_payload))
