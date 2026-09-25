@@ -1,0 +1,22 @@
+# Git
+.git
+.gitignore
+.github/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+env/
+.venv/
+
+# Environment Variables
+.env
+.env.local
+
+# Testing/Linting
+.pytest_cache/
+.coverage
+htmlcov/
