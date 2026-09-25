@@ -16,7 +16,8 @@ def secure_output_handler(llm_generated_code: str):
     parsed = ast.parse(llm_generated_code)
     for node in ast.walk(parsed):
         if isinstance(node, (ast.Import, ast.ImportFrom)):
-            raise SecurityError("Imports forbidden in untrusted LLM output.")
+            # FIX: Changed SecurityError to ValueError
+            raise ValueError("Imports forbidden in untrusted LLM output.")
     print("[+] LLM output passed AST safe-structure validation.")
 
 if __name__ == "__main__":
